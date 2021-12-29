@@ -19,6 +19,7 @@ There are three components you'll need to complete for this project.
     - Builds a text processing and machine learning pipeline.
     - Trains and tunes a model using GridSearchCV.
     - Outputs results on the test set.
+    - Exports the final model as a pickle file.
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
