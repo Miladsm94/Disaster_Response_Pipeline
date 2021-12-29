@@ -12,6 +12,7 @@ Loads the messages and categories datasets
 Merges the two datasets
 Cleans the data
 Stores it in a SQLite database
+
 2. ML Pipeline
 In a Python script, train_classifier.py, write a machine learning pipeline that:
 
