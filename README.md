@@ -6,7 +6,7 @@ In this project, we develope ETL and ML pipelines to analyze real messages that 
 There are three components you'll need to complete for this project.
 
 #### 1. ETL Pipeline
-In a Python script, process_data.py, write a data cleaning pipeline that:
+ In a Python script, process_data.py, write a data cleaning pipeline that:
 
 Loads the messages and categories datasets
 Merges the two datasets
