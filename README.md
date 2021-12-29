@@ -5,14 +5,14 @@ In this project, we develope ETL and ML pipelines to analyze real messages that 
 ### Project Components
 There are three components you'll need to complete for this project.
 
-#### 1. ETL Pipeline
+1. ETL Pipeline
  In a Python script, process_data.py, write a data cleaning pipeline that:
 
 Loads the messages and categories datasets
 Merges the two datasets
 Cleans the data
 Stores it in a SQLite database
-#### 2. ML Pipeline
+2. ML Pipeline
 In a Python script, train_classifier.py, write a machine learning pipeline that:
 
 Loads data from the SQLite database
