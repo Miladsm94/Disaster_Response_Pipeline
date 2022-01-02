@@ -62,6 +62,11 @@ def clean_data(df):
     df = pd.concat([df,categories],axis=1)
     df = df.drop_duplicates()
     
+    # In "related" column, zeros represent the unrelated massages and ones represent the related one's. However, some rows holds other value (2) which can be       considered an error.
+    # Due to lack of knowledge about this value we assign them to the majority class(one).
+
+    df['related']=df['related'].map(lambda x: 1 if x == 2 else x)
+    
     return df
 
 # Function for saving data to SQL database
