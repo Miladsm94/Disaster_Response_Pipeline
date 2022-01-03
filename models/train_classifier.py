@@ -134,7 +134,13 @@ def build_pipeline():
         ('classifier', MultiOutputClassifier(AdaBoostClassifier()))
     ])
 
-    return pipeline
+    parameters = {
+                'classifier__estimator__n_estimators': [25, 50, 75],
+                'classifier__estimator__learning_rate': [1, 1.5]}
+
+    cv = GridSearchCV(pipeline, param_grid=parameters)
+
+    return cv
 
 def multioutput_fscore(y_true,y_pred,beta=1):
     
