@@ -39,7 +39,10 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
-    
+    Cat_number = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum().sort_values(ascending = False)
+    Cat = list(cat_num.index)
+
+    colors = ['yellow', 'green', 'red']
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -60,8 +63,27 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
-    ]
+        },{
+            "data": [
+              {
+                "type": "bar",
+                "x": Cat,
+                "y": Cat_number,
+                "marker": {
+                  "color": 'grey'}
+                }
+            ],
+            "layout": {
+              "title": "Count of Messages by Category",
+              'yaxis': {
+                  'title': "Count"
+              },
+              'xaxis': {
+                  'title': "Genre"
+              },
+              'barmode': 'group'
+            }
+        }]
     
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
